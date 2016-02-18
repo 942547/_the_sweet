@@ -1,0 +1,7 @@
+RemoveHandler .html .htm
+# AddType application/x-httpd-php .php .htm .html .phtml
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^the-sweet\.ru$ [NC]
+RewriteRule ^(.*)$ http://www.the-sweet/$1 [R=301,L]
